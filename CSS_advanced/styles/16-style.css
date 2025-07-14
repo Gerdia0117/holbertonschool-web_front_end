@@ -386,6 +386,8 @@ html {
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+    --container-width: 960px;
+    --container-margin: 0 auto;
 }
 
 /* Task 2: Color values - Updated to use custom properties */
@@ -447,8 +449,8 @@ a[href]:active {
 /* Task 16: Container styling */
 
 .container {
-    width: 960px;
-    margin: 0 auto;
+    width: var(--container-width);
+    margin: var(--container-margin);
 }
 
 /* Headings font-family and font-weight */
