@@ -665,6 +665,7 @@ nav .nav-item {
 nav .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  position: relative;
 }
 
 nav .nav-link:hover {
@@ -678,7 +679,7 @@ nav .nav-link::before {
   left: 0;
   background-color: var(--color-white);
   width: 0;
-  height: 0.2rem;
+  height: 2rem;
 }
 
 nav .nav-item:hover .nav-link::before {
