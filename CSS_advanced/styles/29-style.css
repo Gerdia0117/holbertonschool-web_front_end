@@ -412,14 +412,14 @@ template { /* 1 */
  * Add the correct display in IE 10.
  */
 
-[hidden] {
+[hidden] { 
   display: none;
 }
 
 
 
-/* ==========================================================================
-   CUSTOM STYLES FROM 13-STYLE.CSS
+/* ========================================================================== 
+   CUSTOM STYLES FROM 13-STYLE.CSS 
    ========================================================================== */
 
 /* Root element with custom properties */
@@ -520,7 +520,7 @@ a[href]:active {
   background-color: var(--color-light-grey);
 }
 
-/* Button styling */
+/* Button class selector */
 .button {
   display: var(--button-display);
   padding: var(--button-padding);
@@ -534,7 +534,7 @@ a[href]:active {
 .button:hover {
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
-  background: var(--button-hover-background);
+  background-color: var(--button-hover-background);
 }
 
 /* Visually hidden elements */
@@ -668,6 +668,10 @@ nav .nav-link {
   position: relative;
 }
 
+nav .nav-link:hover {
+  color: var(--nav-item-link-hover);
+}
+
 nav .nav-link::before {
   content: "";
   position: absolute;
@@ -676,10 +680,6 @@ nav .nav-link::before {
   background-color: var(--color-white);
   width: 0;
   height: 0.2rem;
-}
-
-nav .nav-link:hover {
-  color: var(--nav-item-link-hover);
 }
 
 nav .nav-item:hover .nav-link::before {
@@ -701,19 +701,25 @@ nav .nav-item:hover .nav-link::before {
   fill: var(--text-color);
 }
 
-/* Target card-title inside card-services */
+/* Dark theme styling */
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  --button-color: var(--color-white);
+  background: var(--color-black);
+}
+
+/* Card services styling */
 .card-services .card-title {
   margin: 0;
 }
 
-/* Target anchor tags inside card-services */
 .card-services a {
   display: block;
-  padding: calc(2 * 1rem);
+  padding: 2rem;
   background-color: var(--color-light-grey);
 }
 
-/* Hover state for anchor tags inside card-services */
 .card-services a:hover {
   color: var(--color-white);
   background-color: var(--color-primary);
@@ -725,14 +731,12 @@ nav .nav-item:hover .nav-link::before {
   text-align: center;
 }
 
-/* Card avatar styling inside card-testimonial */
 .card-testimonial .card-avatar {
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
 }
 
-/* Cite styling inside card-quote inside card-testimonial */
 .card-testimonial .card-quote cite {
   display: block;
   padding-top: 1rem;
@@ -766,12 +770,4 @@ nav .nav-item:hover .nav-link::before {
   position: var(--header-logo-link-position);
   top: var(--header-logo-link-top);
   left: var(--header-logo-link-left);
-}
-
-/* Dark theme styling */
-[data-section-theme="dark"] {
-  --text-color: var(--color-white);
-  --section-title-color: var(--color-white);
-  --button-color: var(--color-white);
-  background: var(--color-black);
 }
