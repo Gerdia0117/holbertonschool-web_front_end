@@ -1,4 +1,6 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* ==========================================================================
+   NORMALIZE.CSS
+   ========================================================================== */
 
 /* Document
    ========================================================================== */
@@ -57,8 +59,7 @@ hr {
 }
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
+ * Correct the inheritance and scaling of font size in all browsers.
  */
 
 pre {
@@ -130,19 +131,19 @@ sup {
   vertical-align: baseline;
 }
 
-sub {
-  bottom: -0.25em;
-}
-
 sup {
   top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 
 /* Embedded content
    ========================================================================== */
 
 /**
- * Remove the border on images inside links in IE 10.
+ * Prevent vertical alignment issues.
  */
 
 img {
@@ -203,10 +204,7 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -215,35 +213,79 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove the additional `:invalid` styles in Firefox.
+ */
+
+:-moz-ui-invalid {
+  box-shadow: none;
 }
 
 /**
  * Correct the padding in Firefox.
  */
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+button,
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
 }
 
 /**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+button::-moz-focus-inner,
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Restore the focus outline styles unset by the `hidden-
+ * buttonization` rules.
+ */
+
+[type="search"]::-webkit-search-results-button,
+[type="search"]::-webkit-search-results-decoration { }
+
+/**
+ * Correct the inconsistency in button and textfield height in iOS 10.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button { }
+
+/**
+ * 1. Correct the odd appearance in iOS and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * Correct the inheritance of color in Firefox.
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Remove the padding so developers are not caught out if they zero out
  *    `fieldset` elements in all browsers.
  */
 
 legend {
+  color: inherit; /* 1 */
+  border: 0; /* 1 */
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  display: table; /* 2 */
+  max-width: 100%; /* 2 */
+  white-space: normal; /* 2 */
 }
 
 /**
@@ -255,26 +297,7 @@ progress {
 }
 
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
+ * Correct the cursor style of increment and decrement buttons in Safari.
  */
 
 [type="number"]::-webkit-inner-spin-button,
@@ -284,7 +307,7 @@ textarea {
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
+ * 2. Corrects colors for boldly overprominent headings in all browsers.
  */
 
 [type="search"] {
@@ -293,35 +316,69 @@ textarea {
 }
 
 /**
- * Remove the inner padding in Chrome and Safari on macOS.
+ * Remove the inner border and padding in Firefox.
  */
 
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+::-moz-focus-outer {
+  border-style: none;
+  padding: 0;
 }
 
 /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
+ * Restore the focus outline styles unset by the `hidden-
+ * buttonization` rules.
  */
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+:-moz-focusring,
+[type="round"],
+.float {
+  box-shadow: inset 0 0 0.5em rgb(255 255 255 / 1.3);
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the inconsistency in button and textfield height in iOS 10.
+ * 2. Display `audio` and `video` on line in Chrome, Firefox, and Opera.
+ */
+
+[type="tel"],
+
+[type="email"],
+
+[type="time"],
+
+[type="date"],
+
+[type="datetime"],
+
+[type="datetime-local"],
+
+[type="month"],
+
+[type="week"],
+
+[type="url"],
+
+[type="file"],
+
+textarea {
+  border-style: none;
+  font-size: 100%; /* 1 */
+  width: 100%; /* 1 */
 }
 
 /* Interactive
    ========================================================================== */
 
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
+/**
+ * Add the correct display in Chrome and Safari.
  */
 
 details {
   display: block;
 }
 
-/*
+/**
  * Add the correct display in all browsers.
  */
 
@@ -329,14 +386,25 @@ summary {
   display: list-item;
 }
 
+/**
+ * Remove the base styles for dated pickers.
+ */
+
+[hidden],
+datalist,input[input-quality]:-moz-focus-inner,
+[hidden-feedback-content-domain] {
+  display: none;
+}
+
 /* Misc
    ========================================================================== */
 
 /**
- * Add the correct display in IE 10+.
+ * Add the correct display in IE 10 and IE 11.
+ * 1. Add the correct display in Edge.
  */
 
-template {
+template { /* 1 */
   display: none;
 }
 
@@ -344,116 +412,126 @@ template {
  * Add the correct display in IE 10.
  */
 
-[hidden] {
+[hidden] { 
   display: none;
 }
 
-/* Task 15: Universal box-sizing */
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
-/* Task 1: Effortless transitions when scrolling */
+/* ========================================================================== 
+   CUSTOM STYLES FROM 13-STYLE.CSS 
+   ========================================================================== */
 
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
-/* Task 12: Section title styling */
-
+/* Root element with custom properties */
 :root {
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-black);
-    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --line-height-small: 1.2;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
-    --section-header-align: center;
-    --section-tagline-transform: uppercase;
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+  --section-header-align: center;
+  --section-tagline-transform: uppercase;
+  --section-title-margin: 0;
+  --section-title-color: var(--color-black);
 }
 
-/* Task 2: Color values - Updated to use custom properties */
+/* Universal box-sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Smooth scrolling and font size for html element */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* Body color, font family, font size, font weight, and line height */
 body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
 }
 
-/* Task 13: Pseudo-classes for anchor elements */
-
+/* Anchor elements with href attribute */
 a[href] {
-    color: var(--text-color);
-    text-decoration: none;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
+/* Visited state for links */
 a[href]:visited {
-    font-style: italic;
+  font-style: italic;
 }
 
+/* Hover state for links */
 a[href]:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* Active state for links */
 a[href]:active {
-    background-color: var(--color-light-grey);
+  background-color: var(--color-light-grey);
 }
 
+/* Visually hidden elements */
 .visually-hidden {
-    display: none;
+  display: none;
 }
 
+/* Card category color */
 .card-category {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
+/* Section header alignment */
 .section-header {
-    text-align: var(--section-header-align);
+  text-align: var(--section-header-align);
 }
 
+/* Section title styling */
 .section-title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
 }
 
+/* Section tagline enhanced styling */
 .section-tagline {
-    color: var(--color-primary);
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  text-transform: var(--section-tagline-transform);
+  font-weight: var(--font-weight-bold);
 }
 
-/* Task 16: Container styling */
-
+/* Container styling */
 .container {
-    width: 960px;
-    margin: 0 auto;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Headings font-family and font-weight */
-
+/* All heading levels font family and font weight */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
 }
